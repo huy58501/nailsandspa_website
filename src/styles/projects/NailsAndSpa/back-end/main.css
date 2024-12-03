@@ -1,0 +1,233 @@
+html {
+  width: 100%;
+  padding: 0 !important;
+  background-color: 0px 4px 50px #d9ddfc;
+}
+
+a {
+  text-decoration: none;
+}
+
+.brand h1 {
+  font-family: 'kings-caslon-display' !important;
+  font-size: 100%;
+  color: #474747;
+  font-family: monospace;
+  letter-spacing: 7px!important;
+  cursor: pointer;
+  background: linear-gradient(90deg,#6a67ce 0,#fc636b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite
+}
+
+@keyframes shine {
+  0% {
+      background-position: 0
+  }
+
+  60% {
+      background-position: 600px
+  }
+
+  to {
+      background-position: 600px
+  }
+}
+
+.brand .brandh1 .popup-content {
+  margin: auto;
+  background: #fff;
+  width: 100%;
+  padding: 5px
+}
+
+.brand h1 .popup-arrow {
+  color: #fff
+}
+
+.brand h1 [role=tooltip].popup-content {
+  width: 100%;
+  box-shadow: 0 0 3px rgba(0,0,0,.16)
+}
+
+.brand h1 .popup-overlay {
+  background: rgba(0,0,0,.5)
+}
+
+.brand h1 [data-popup=tooltip].popup-overlay {
+  background: transparent
+}
+
+.p-menu {
+  height: 100%;
+  border: none;
+  margin-top: -20px;
+}
+
+.p-menu .p-submenu-header{
+  font-size: 24px;
+}
+
+.p-menu .p-menuitem-link{
+  font-size: 18px;
+}
+
+.p-splitter .p-splitter-gutter {
+  display: none;
+}
+.panel-right {
+  width: 100%;
+  display: flex;
+}
+.flex-item {
+  width: 50%;
+  height: 100%;
+}
+.panel-left {
+  margin: 50px 10px;
+  width: auto;
+}
+
+.CusGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.field {
+  flex: 0 0 calc(33.33% - 10px); /* Adjust width as needed */
+  margin-bottom: 20px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.InputText {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.EmpAndServices {
+  padding-top: 2%;
+  display: flex;
+  width: 100%;
+}
+
+.p-dropdown {
+  width: 130%;
+  margin: 10px 0;
+}
+
+.EmpAndServices .field-right {
+  padding-left: 5%;
+}
+
+.countup-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.countup-wrapper-chart {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.countup-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  font-size: 30px;
+  border: 1px solid rgb(201, 203, 207);
+  border-radius: 50%;
+  background: rgba(201, 203, 207, 0.2);
+}
+
+.p-dialog .p-dialog-content {
+  background-color: white !important; /* Corrected value */
+}
+
+.dashboard{
+  padding: 0 3%;
+}
+
+.dashboard-chart{
+  padding: 10px;
+  text-align: center;
+}
+
+.dashboard-chart span {
+  display: inline-block; 
+  /* Add your CSS properties here */
+  font-size: 16px; /* Example property */
+  margin-top: 10px;
+}
+
+.charts{
+  width: 600px;
+}
+
+@media screen and (max-width: 1300px) {
+  .field {
+    flex: 0 0 calc(50% - 20px); /* Adjust width for smaller screens */
+  }
+  .charts{
+    width: 400px !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h2{
+    font-size: 16px;
+  }
+  .dashboard{
+    padding: 10;
+  }
+  .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+    border: 1px solid rgb(201, 203, 207);
+    border-radius: 50%;
+    background: rgba(201, 203, 207, 0.2);
+  }
+  .field {
+    flex: 0 0 calc(50% - 20px); /* Adjust width for smaller screens */
+  }
+  .charts{
+    width: 400px !important;
+  }
+
+  .countup-wrapper-chart {
+    display: block;
+  }
+  
+}
+
+@media screen and (max-width: 400px) {
+  .brand h1 {
+    padding-left: 30px;
+  }
+  .charts{
+    width: 300px !important;
+  }
+
+}

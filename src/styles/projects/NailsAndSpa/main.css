@@ -1,0 +1,49 @@
+  html{
+    width: 100%;
+    background-color: 0px 4px 50px #d9ddfc;
+  }
+
+  .p-menu {
+    height: 100%;
+    width: 18vh;
+  }
+
+  .p-splitter .p-splitter-gutter{
+    display: none;
+  }
+  .panel-right{
+    margin: 1%;
+    display: block;
+  }
+  .CusGrid {
+    padding-top: 1%;
+    display: flex;
+    margin-left: -3%;
+  }
+  .CusGrid .field{
+    padding-left: 3%;
+  }
+  .field .p-inputtext{
+    margin-top: 10px;
+  }
+  .field-1 .p-inputtext{
+    margin-top: 10px;
+  }
+.EmpAndServices{
+  padding-top: 2%;
+  display: flex;
+  width: 100%;
+}
+
+.p-dropdown {
+  width: 130%;
+  margin: 10px 0;
+}
+
+.EmpAndServices .field-right{
+  padding-left: 5%;
+}
+
+.carousel-container{
+  border: none;
+}

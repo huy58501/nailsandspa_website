@@ -1,0 +1,68 @@
+/* Make the container stay centered with padding */
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 0 10%;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+/* Make sure the form and calendar take 50% width on larger screens */
+.calendar,
+.form-container {
+  flex: 1;
+  margin: 10px;
+  align-items: flex-start;
+}
+
+/* On smaller screens, stack the calendar and form vertically */
+@media (max-width: 768px) {
+  .calendar,
+  .form-container {
+    flex: 1 100%;
+    margin: 10px 0;
+  }
+}
+
+/* Style the form inputs, dropdowns, and buttons */
+input,
+textarea,
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* Increase the size of dropdowns and inputs */
+.p-inputtext,
+.p-dropdown {
+  font-size: 16px;
+  min-height: 40px;
+}
+
+/* Button style */
+.p-button {
+  width: 160px;
+  text-align: center;
+  padding: 12px;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+/* Adjust the calendar to be responsive */
+.p-calendar {
+  margin-top: 20px;
+  width: 100%;
+}
+
+label {
+  margin-top: 5px;
+}
+
+h3{
+  text-align: center;
+}

@@ -1,0 +1,84 @@
+.container-servicePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  margin-top: -45px;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.photo, .services {
+  position: relative;
+  transition: transform 1s ease-in-out;
+  box-sizing: border-box;
+  width: 50%; /* Make each take up 50% of the width */
+}
+
+.photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-100%); /* Move the photo off-screen to the left */
+  z-index: 1;
+  height: 100vh; /* Adjust height to auto to maintain aspect ratio */
+  opacity: 90%;
+}
+
+.photo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.services {
+  transform: translateX(100%); /* Move the services list off-screen to the right */
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 2;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .container-servicePage{
+    margin-top: 0;
+  }
+
+  .item {
+    flex-direction: column;
+  }
+
+  .photo, .services {
+    flex: 1;
+    transform: none;
+    width: 90%; /* Make each take up 100% of the width on smaller screens */
+    margin: 10px 0;
+  }
+}

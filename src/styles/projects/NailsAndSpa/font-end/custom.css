@@ -1,0 +1,6 @@
+  @font-face {
+    font-family: 'kings-caslon-display';
+    src: local('kings-caslon-display'),
+      url('/fonts/KingsCaslonDisplay_Trial_Rg.ttf') format('truetype');
+  }
+  
