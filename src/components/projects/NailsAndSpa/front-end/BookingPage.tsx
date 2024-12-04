@@ -103,7 +103,7 @@ const BookingPage = () => {
     console.log("bookingDetails: " + JSON.stringify(bookingDetails));
   
     try {
-      const response = await fetch("http://ec2-3-144-38-198.us-east-2.compute.amazonaws.com:5001/api/sendSmsConfirmation", {
+      const response = await fetch("https://tonyinthewild.ca/api/sendSmsConfirmation", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
