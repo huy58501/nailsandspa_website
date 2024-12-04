@@ -5,7 +5,6 @@
   padding: 0 10%;
   margin-top: 20px;
   flex-wrap: wrap;
-  align-items: flex-start;
 }
 
 /* Make sure the form and calendar take 50% width on larger screens */
@@ -13,7 +12,7 @@
 .form-container {
   flex: 1;
   margin: 10px;
-  align-items: flex-start;
+  align-items: flex-start !important;
 }
 
 /* On smaller screens, stack the calendar and form vertically */

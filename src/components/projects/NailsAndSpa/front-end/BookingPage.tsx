@@ -76,9 +76,10 @@ const BookingPage = () => {
       return; // Prevent form submission if any field is empty
     }
   
-    // Validate phone number (basic check for a valid format)
-    if (!/^(\d{3}) \d{3}-\d{4}$/.test(formData.phone)) {
-      alert("Please enter a valid phone number.");
+    // Validate phone number (basic check for the phone format, considering input mask format (xxx) xxx-xxxx)
+    const phoneRegex = /^\(\d{3}\) \d{3}-\d{4}$/;
+    if (!phoneRegex.test(formData.phone)) {
+      alert("Please enter a valid phone number in the format (xxx) xxx-xxxx.");
       return; // Prevent form submission if the phone number is invalid
     }
   
@@ -89,12 +90,12 @@ const BookingPage = () => {
       return; // Prevent form submission if the email is invalid
     }
   
-    // Remove non-numeric characters from the phone number
+    // Remove non-numeric characters from the phone number for sending it to the backend
     const cleanedPhone = formData.phone.replace(/[^\d]/g, '');
   
     const bookingDetails = {
       customerName: formData.customerName,
-      phone: cleanedPhone,
+      phone: cleanedPhone,  // Send the cleaned phone number
       date: date?.toLocaleDateString(),
       time: formData.time,
     };
@@ -125,6 +126,7 @@ const BookingPage = () => {
   
     setShowDialog(true); // Show the confirmation dialog after form submission
   };
+  
 
   const handleBookAnother = () => {
     // Reset the form data for another booking
