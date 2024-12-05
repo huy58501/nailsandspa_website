@@ -1,14 +1,10 @@
 /* Make the container stay centered with padding */
-.container {
+.booking-container {
   display: flex;
   justify-content: center;
   padding: 0 10%;
-  margin-top: 20px !important;
+  margin-top: 20px;
   flex-wrap: wrap;
-}
-
-.calendar{
-  align-items: flex-start;
 }
 
 /* Make sure the form and calendar take 50% width on larger screens */

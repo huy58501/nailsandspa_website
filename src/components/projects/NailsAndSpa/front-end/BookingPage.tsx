@@ -177,7 +177,7 @@ const BookingPage = () => {
   };
 
   return (
-    <div className="container">
+    <div className="booking-container">
       {/* Calendar */}
       <div className="calendar">
         <h3>Select a Date</h3>

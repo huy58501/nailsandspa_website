@@ -6,12 +6,6 @@
       "static/css/app/projects/sweetienails/page.css",
       "static/chunks/app/projects/sweetienails/page.js"
     ],
-    "/projects/sweetienails/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/projects/sweetienails/layout.css",
-      "static/chunks/app/projects/sweetienails/layout.js"
-    ],
     "/projects/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -23,6 +17,12 @@
       "static/chunks/main-app.js",
       "static/css/app/projects/sweetienails/booking/page.css",
       "static/chunks/app/projects/sweetienails/booking/page.js"
+    ],
+    "/projects/sweetienails/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/projects/sweetienails/layout.css",
+      "static/chunks/app/projects/sweetienails/layout.js"
     ],
     "/projects/sweetienails/booking/layout": [
       "static/chunks/webpack.js",
