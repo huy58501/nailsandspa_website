@@ -41,15 +41,15 @@ const generateTimeOptions = () => {
 const timeOptions = generateTimeOptions();
 
 const BookingPage = () => {
-  const [date, setDate] = useState<Nullable<Date>>(null);
+  const [date, setDate] = useState<Nullable<Date>>(new Date());
   const [formData, setFormData] = useState({
     customerName: "",
     phone: "",
     email: "",
-    employee: null,
-    service: null,
-    time: "",
-  });
+    employee: employees[0] || null, // Default to first employee or null
+    service: services[0] || null, // Default to first service or null
+    time: timeOptions[0] || "", // Default to first time option or empty string
+  });  
 
   // State for dialog visibility
   const [showDialog, setShowDialog] = useState(false);
@@ -67,65 +67,95 @@ const BookingPage = () => {
     setShowDialog(false);
   };
 
+  const [errors, setErrors] = useState({
+    customerName: "",
+    phone: "",
+    email: "",
+    employee: "",
+    service: "",
+    time: "",
+  });
+  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
   
+    // Reset errors before validation
+    setErrors({
+      customerName: "",
+      phone: "",
+      email: "",
+      employee: "",
+      service: "",
+      time: "",
+    });
+  
+    let hasError = false;
+  
     // Basic validation
-    if (!formData.customerName || !formData.phone || !formData.email || !formData.employee || !formData.service || !formData.time) {
-      alert("Please fill in all the required fields.");
-      return; // Prevent form submission if any field is empty
+    if (!formData.customerName) {
+      setErrors((prev) => ({ ...prev, customerName: "Customer name is required" }));
+      hasError = true;
+    }
+    if (!formData.phone) {
+      setErrors((prev) => ({ ...prev, phone: "Phone number is required" }));
+      hasError = true;
+    }
+    if (!formData.email) {
+      setErrors((prev) => ({ ...prev, email: "Email is required" }));
+      hasError = true;
+    }
+    if (!formData.employee) {
+      setErrors((prev) => ({ ...prev, employee: "Please select an employee" }));
+      hasError = true;
+    }
+    if (!formData.service) {
+      setErrors((prev) => ({ ...prev, service: "Please select a service" }));
+      hasError = true;
+    }
+    if (!formData.time) {
+      setErrors((prev) => ({ ...prev, time: "Please select a time" }));
+      hasError = true;
     }
   
-    // Validate phone number (basic check for the phone format, considering input mask format (xxx) xxx-xxxx)
+    // Validate phone number format
     const phoneRegex = /^\(\d{3}\) \d{3}-\d{4}$/;
-    if (!phoneRegex.test(formData.phone)) {
-      alert("Please enter a valid phone number in the format (xxx) xxx-xxxx.");
-      return; // Prevent form submission if the phone number is invalid
+    if (formData.phone && !phoneRegex.test(formData.phone)) {
+      setErrors((prev) => ({ ...prev, phone: "Please enter a valid phone number" }));
+      hasError = true;
     }
   
-    // Validate email (basic check for a valid format)
+    // Validate email format
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    if (!emailRegex.test(formData.email)) {
-      alert("Please enter a valid email address.");
-      return; // Prevent form submission if the email is invalid
+    if (formData.email && !emailRegex.test(formData.email)) {
+      setErrors((prev) => ({ ...prev, email: "Please enter a valid email address" }));
+      hasError = true;
     }
   
-    // Remove non-numeric characters from the phone number for sending it to the backend
-    const cleanedPhone = formData.phone.replace(/[^\d]/g, '');
-  
-    const bookingDetails = {
-      customerName: formData.customerName,
-      phone: cleanedPhone,  // Send the cleaned phone number
-      date: date?.toLocaleDateString(),
-      time: formData.time,
-    };
-  
-    console.log("bookingDetails: " + JSON.stringify(bookingDetails));
+    if (hasError) return; // Prevent form submission if any field is invalid
   
     try {
-      const response = await fetch("https://tonyinthewild.ca/api/sendSmsConfirmation", {
+      const response = await fetch("https://16ulufaar6.execute-api.us-east-2.amazonaws.com/prod/api/sendSmsConfirmation", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(bookingDetails),
+        body: JSON.stringify(formData),
       });
-  
+    
       if (response.ok) {
         console.log("Booking confirmation sent via SMS!");
         setShowDialog(true); // Show the confirmation dialog
       } else {
         const errorResponse = await response.json();
-        console.error("Failed to send booking confirmation via SMS:", errorResponse.error);
+        console.error("Failed to send booking confirmation via SMS:", errorResponse);
         alert(`Error: ${errorResponse.error}`);
       }
     } catch (error) {
       console.error("Error:", error);
       alert("An error occurred while sending the booking confirmation.");
-    }
-  
-    setShowDialog(true); // Show the confirmation dialog after form submission
-  };  
+    }    
+  };
+   
 
   const handleBookAnother = () => {
     // Reset the form data for another booking
@@ -133,9 +163,9 @@ const BookingPage = () => {
       customerName: "",
       phone: "",
       email: "",
-      employee: null,
-      service: null,
-      time: "",
+      employee: employees[0],
+      service: services[0],
+      time: timeOptions[0],
     });
     setDate(null); // Clear the selected date as well
     setShowDialog(false); // Close the dialog
@@ -172,6 +202,7 @@ const BookingPage = () => {
             placeholder="Enter customer name"
             style={{ width: "100%" }}
           />
+          {errors.customerName && <small className="error">{errors.customerName}</small>}
         </div>
 
         <div>
@@ -184,6 +215,7 @@ const BookingPage = () => {
             placeholder="Enter phone number"
             style={{ width: "100%" }}
           />
+          {errors.phone && <small className="error">{errors.phone}</small>}
         </div>
 
         <div>
@@ -195,6 +227,7 @@ const BookingPage = () => {
             placeholder="Enter email"
             style={{ width: "100%" }}
           />
+          {errors.email && <small className="error">{errors.email}</small>}
         </div>
 
         <div>
@@ -206,6 +239,7 @@ const BookingPage = () => {
             placeholder="Select an employee"
             style={{ width: "100%" }}
           />
+          {errors.employee && <small className="error">{errors.employee}</small>}
         </div>
 
         <div>
@@ -217,6 +251,7 @@ const BookingPage = () => {
             placeholder="Select a service"
             style={{ width: "100%" }}
           />
+          {errors.service && <small className="error">{errors.service}</small>}
         </div>
 
         <div>
@@ -228,7 +263,9 @@ const BookingPage = () => {
             placeholder="Select a time"
             style={{ width: "100%" }}
           />
+          {errors.time && <small className="error">{errors.time}</small>}
         </div>
+
 
         <Button label="Submit" type="submit" />
       </form>

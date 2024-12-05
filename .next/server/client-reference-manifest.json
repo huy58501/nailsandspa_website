@@ -176,6 +176,66 @@
         "async": false
       }
     },
+    "(app-client)/./app/projects/sweetienails/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/projects/sweetienails/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./app/projects/sweetienails/page.tsx",
+        "name": "",
+        "chunks": [],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./app/projects/sweetienails/page.tsx",
+        "name": "default",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/link.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
+        "name": "",
+        "chunks": [],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
+        "name": "default",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/projects/sweetienails/layout.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/projects/sweetienails/layout.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./app/projects/sweetienails/layout.tsx",
+        "name": "",
+        "chunks": [],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./app/projects/sweetienails/layout.tsx",
+        "name": "default",
+        "chunks": [],
+        "async": false
+      }
+    },
     "(app-client)/./app/projects/layout.tsx": {
       "*": {
         "id": "(sc_client)/./app/projects/layout.tsx",
@@ -216,26 +276,6 @@
         "async": false
       }
     },
-    "(app-client)/./node_modules/next/dist/client/link.js": {
-      "*": {
-        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      },
-      "": {
-        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
-        "name": "",
-        "chunks": [],
-        "async": false
-      },
-      "default": {
-        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
-        "name": "default",
-        "chunks": [],
-        "async": false
-      }
-    },
     "(app-client)/./app/projects/sweetienails/booking/layout.tsx": {
       "*": {
         "id": "(sc_client)/./app/projects/sweetienails/booking/layout.tsx",
@@ -251,46 +291,6 @@
       },
       "default": {
         "id": "(sc_client)/./app/projects/sweetienails/booking/layout.tsx",
-        "name": "default",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./app/projects/sweetienails/page.tsx": {
-      "*": {
-        "id": "(sc_client)/./app/projects/sweetienails/page.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      },
-      "": {
-        "id": "(sc_client)/./app/projects/sweetienails/page.tsx",
-        "name": "",
-        "chunks": [],
-        "async": false
-      },
-      "default": {
-        "id": "(sc_client)/./app/projects/sweetienails/page.tsx",
-        "name": "default",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./app/projects/sweetienails/layout.tsx": {
-      "*": {
-        "id": "(sc_client)/./app/projects/sweetienails/layout.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      },
-      "": {
-        "id": "(sc_client)/./app/projects/sweetienails/layout.tsx",
-        "name": "",
-        "chunks": [],
-        "async": false
-      },
-      "default": {
-        "id": "(sc_client)/./app/projects/sweetienails/layout.tsx",
         "name": "default",
         "chunks": [],
         "async": false
@@ -971,56 +971,176 @@
       ],
       "async": false
     },
-    "/Users/tonynguyen/nails_and_spa_project/client/node_modules/bootstrap/dist/css/bootstrap.min.css#": {
+    "/Users/tonynguyen/nails_and_spa_project/client/src/styles/projects/NailsAndSpa/font-end/main.css#": {
       "id": "null",
       "name": "default",
       "chunks": [
-        "static/css/app/projects/layout.css"
+        "static/css/app/projects/sweetienails/page.css",
+        "static/css/app/projects/sweetienails/booking/page.css"
       ]
+    },
+    "/Users/tonynguyen/nails_and_spa_project/client/app/projects/sweetienails/page.tsx": {
+      "id": "(app-client)/./app/projects/sweetienails/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/projects/sweetienails/page:static/chunks/app/projects/sweetienails/page.js"
+      ],
+      "async": false
+    },
+    "/Users/tonynguyen/nails_and_spa_project/client/app/projects/sweetienails/page.tsx#": {
+      "id": "(app-client)/./app/projects/sweetienails/page.tsx",
+      "name": "",
+      "chunks": [
+        "app/projects/sweetienails/page:static/chunks/app/projects/sweetienails/page.js"
+      ],
+      "async": false
+    },
+    "/Users/tonynguyen/nails_and_spa_project/client/app/projects/sweetienails/page.tsx#default": {
+      "id": "(app-client)/./app/projects/sweetienails/page.tsx",
+      "name": "default",
+      "chunks": [
+        "app/projects/sweetienails/page:static/chunks/app/projects/sweetienails/page.js"
+      ],
+      "async": false
+    },
+    "/Users/tonynguyen/nails_and_spa_project/client/node_modules/next/dist/client/link.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+      "name": "*",
+      "chunks": [
+        "app/projects/sweetienails/booking/page:static/chunks/app/projects/sweetienails/booking/page.js"
+      ],
+      "async": false
+    },
+    "/Users/tonynguyen/nails_and_spa_project/client/node_modules/next/dist/esm/client/link.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+      "name": "*",
+      "chunks": [
+        "app/projects/sweetienails/booking/page:static/chunks/app/projects/sweetienails/booking/page.js"
+      ],
+      "async": false
+    },
+    "/Users/tonynguyen/nails_and_spa_project/client/node_modules/next/dist/client/link.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+      "name": "",
+      "chunks": [
+        "app/projects/sweetienails/booking/page:static/chunks/app/projects/sweetienails/booking/page.js"
+      ],
+      "async": false
+    },
+    "/Users/tonynguyen/nails_and_spa_project/client/node_modules/next/dist/esm/client/link.js#": {
+      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+      "name": "",
+      "chunks": [
+        "app/projects/sweetienails/booking/page:static/chunks/app/projects/sweetienails/booking/page.js"
+      ],
+      "async": false
+    },
+    "/Users/tonynguyen/nails_and_spa_project/client/node_modules/next/dist/client/link.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+      "name": "default",
+      "chunks": [
+        "app/projects/sweetienails/booking/page:static/chunks/app/projects/sweetienails/booking/page.js"
+      ],
+      "async": false
+    },
+    "/Users/tonynguyen/nails_and_spa_project/client/node_modules/next/dist/esm/client/link.js#default": {
+      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+      "name": "default",
+      "chunks": [
+        "app/projects/sweetienails/booking/page:static/chunks/app/projects/sweetienails/booking/page.js"
+      ],
+      "async": false
     },
     "/Users/tonynguyen/nails_and_spa_project/client/node_modules/primeflex/primeflex.css#": {
       "id": "null",
       "name": "default",
       "chunks": [
+        "static/css/app/projects/sweetienails/layout.css",
         "static/css/app/projects/layout.css",
-        "static/css/app/projects/sweetienails/booking/layout.css",
-        "static/css/app/projects/sweetienails/layout.css"
+        "static/css/app/projects/sweetienails/booking/layout.css"
       ]
     },
     "/Users/tonynguyen/nails_and_spa_project/client/node_modules/primeicons/primeicons.css#": {
       "id": "null",
       "name": "default",
       "chunks": [
+        "static/css/app/projects/sweetienails/layout.css",
         "static/css/app/projects/layout.css",
-        "static/css/app/projects/sweetienails/booking/layout.css",
-        "static/css/app/projects/sweetienails/layout.css"
+        "static/css/app/projects/sweetienails/booking/layout.css"
       ]
     },
     "/Users/tonynguyen/nails_and_spa_project/client/node_modules/primereact/resources/primereact.min.css#": {
       "id": "null",
       "name": "default",
       "chunks": [
+        "static/css/app/projects/sweetienails/layout.css",
         "static/css/app/projects/layout.css",
-        "static/css/app/projects/sweetienails/booking/layout.css",
-        "static/css/app/projects/sweetienails/layout.css"
+        "static/css/app/projects/sweetienails/booking/layout.css"
       ]
     },
     "/Users/tonynguyen/nails_and_spa_project/client/node_modules/primereact/resources/themes/bootstrap4-light-blue/theme.css#": {
       "id": "null",
       "name": "default",
       "chunks": [
+        "static/css/app/projects/sweetienails/layout.css",
         "static/css/app/projects/layout.css",
-        "static/css/app/projects/sweetienails/booking/layout.css",
-        "static/css/app/projects/sweetienails/layout.css"
+        "static/css/app/projects/sweetienails/booking/layout.css"
       ]
     },
     "/Users/tonynguyen/nails_and_spa_project/client/node_modules/primereact/resources/themes/lara-light-indigo/theme.css#": {
       "id": "null",
       "name": "default",
       "chunks": [
+        "static/css/app/projects/sweetienails/layout.css",
         "static/css/app/projects/layout.css",
-        "static/css/app/projects/sweetienails/booking/layout.css",
-        "static/css/app/projects/sweetienails/layout.css"
+        "static/css/app/projects/sweetienails/booking/layout.css"
+      ]
+    },
+    "/Users/tonynguyen/nails_and_spa_project/client/src/styles/projects/NailsAndSpa/back-end/main.css#": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/projects/sweetienails/layout.css",
+        "static/css/app/projects/sweetienails/booking/layout.css"
+      ]
+    },
+    "/Users/tonynguyen/nails_and_spa_project/client/src/styles/projects/NailsAndSpa/font-end/custom.css#": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/projects/sweetienails/layout.css",
+        "static/css/app/projects/sweetienails/booking/layout.css"
+      ]
+    },
+    "/Users/tonynguyen/nails_and_spa_project/client/app/projects/sweetienails/layout.tsx": {
+      "id": "(app-client)/./app/projects/sweetienails/layout.tsx",
+      "name": "*",
+      "chunks": [
+        "app/projects/sweetienails/layout:static/chunks/app/projects/sweetienails/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/tonynguyen/nails_and_spa_project/client/app/projects/sweetienails/layout.tsx#": {
+      "id": "(app-client)/./app/projects/sweetienails/layout.tsx",
+      "name": "",
+      "chunks": [
+        "app/projects/sweetienails/layout:static/chunks/app/projects/sweetienails/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/tonynguyen/nails_and_spa_project/client/app/projects/sweetienails/layout.tsx#default": {
+      "id": "(app-client)/./app/projects/sweetienails/layout.tsx",
+      "name": "default",
+      "chunks": [
+        "app/projects/sweetienails/layout:static/chunks/app/projects/sweetienails/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/tonynguyen/nails_and_spa_project/client/node_modules/bootstrap/dist/css/bootstrap.min.css#": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/projects/layout.css"
       ]
     },
     "/Users/tonynguyen/nails_and_spa_project/client/app/projects/layout.tsx": {
@@ -1054,14 +1174,6 @@
         "static/css/app/projects/sweetienails/booking/page.css"
       ]
     },
-    "/Users/tonynguyen/nails_and_spa_project/client/src/styles/projects/NailsAndSpa/font-end/main.css#": {
-      "id": "null",
-      "name": "default",
-      "chunks": [
-        "static/css/app/projects/sweetienails/booking/page.css",
-        "static/css/app/projects/sweetienails/page.css"
-      ]
-    },
     "/Users/tonynguyen/nails_and_spa_project/client/app/projects/sweetienails/booking/page.tsx": {
       "id": "(app-client)/./app/projects/sweetienails/booking/page.tsx",
       "name": "*",
@@ -1086,70 +1198,6 @@
       ],
       "async": false
     },
-    "/Users/tonynguyen/nails_and_spa_project/client/node_modules/next/dist/client/link.js": {
-      "id": "(app-client)/./node_modules/next/dist/client/link.js",
-      "name": "*",
-      "chunks": [
-        "app/projects/sweetienails/page:static/chunks/app/projects/sweetienails/page.js"
-      ],
-      "async": false
-    },
-    "/Users/tonynguyen/nails_and_spa_project/client/node_modules/next/dist/esm/client/link.js": {
-      "id": "(app-client)/./node_modules/next/dist/client/link.js",
-      "name": "*",
-      "chunks": [
-        "app/projects/sweetienails/page:static/chunks/app/projects/sweetienails/page.js"
-      ],
-      "async": false
-    },
-    "/Users/tonynguyen/nails_and_spa_project/client/node_modules/next/dist/client/link.js#": {
-      "id": "(app-client)/./node_modules/next/dist/client/link.js",
-      "name": "",
-      "chunks": [
-        "app/projects/sweetienails/page:static/chunks/app/projects/sweetienails/page.js"
-      ],
-      "async": false
-    },
-    "/Users/tonynguyen/nails_and_spa_project/client/node_modules/next/dist/esm/client/link.js#": {
-      "id": "(app-client)/./node_modules/next/dist/client/link.js",
-      "name": "",
-      "chunks": [
-        "app/projects/sweetienails/page:static/chunks/app/projects/sweetienails/page.js"
-      ],
-      "async": false
-    },
-    "/Users/tonynguyen/nails_and_spa_project/client/node_modules/next/dist/client/link.js#default": {
-      "id": "(app-client)/./node_modules/next/dist/client/link.js",
-      "name": "default",
-      "chunks": [
-        "app/projects/sweetienails/page:static/chunks/app/projects/sweetienails/page.js"
-      ],
-      "async": false
-    },
-    "/Users/tonynguyen/nails_and_spa_project/client/node_modules/next/dist/esm/client/link.js#default": {
-      "id": "(app-client)/./node_modules/next/dist/client/link.js",
-      "name": "default",
-      "chunks": [
-        "app/projects/sweetienails/page:static/chunks/app/projects/sweetienails/page.js"
-      ],
-      "async": false
-    },
-    "/Users/tonynguyen/nails_and_spa_project/client/src/styles/projects/NailsAndSpa/back-end/main.css#": {
-      "id": "null",
-      "name": "default",
-      "chunks": [
-        "static/css/app/projects/sweetienails/booking/layout.css",
-        "static/css/app/projects/sweetienails/layout.css"
-      ]
-    },
-    "/Users/tonynguyen/nails_and_spa_project/client/src/styles/projects/NailsAndSpa/font-end/custom.css#": {
-      "id": "null",
-      "name": "default",
-      "chunks": [
-        "static/css/app/projects/sweetienails/booking/layout.css",
-        "static/css/app/projects/sweetienails/layout.css"
-      ]
-    },
     "/Users/tonynguyen/nails_and_spa_project/client/app/projects/sweetienails/booking/layout.tsx": {
       "id": "(app-client)/./app/projects/sweetienails/booking/layout.tsx",
       "name": "*",
@@ -1171,54 +1219,6 @@
       "name": "default",
       "chunks": [
         "app/projects/sweetienails/booking/layout:static/chunks/app/projects/sweetienails/booking/layout.js"
-      ],
-      "async": false
-    },
-    "/Users/tonynguyen/nails_and_spa_project/client/app/projects/sweetienails/page.tsx": {
-      "id": "(app-client)/./app/projects/sweetienails/page.tsx",
-      "name": "*",
-      "chunks": [
-        "app/projects/sweetienails/page:static/chunks/app/projects/sweetienails/page.js"
-      ],
-      "async": false
-    },
-    "/Users/tonynguyen/nails_and_spa_project/client/app/projects/sweetienails/page.tsx#": {
-      "id": "(app-client)/./app/projects/sweetienails/page.tsx",
-      "name": "",
-      "chunks": [
-        "app/projects/sweetienails/page:static/chunks/app/projects/sweetienails/page.js"
-      ],
-      "async": false
-    },
-    "/Users/tonynguyen/nails_and_spa_project/client/app/projects/sweetienails/page.tsx#default": {
-      "id": "(app-client)/./app/projects/sweetienails/page.tsx",
-      "name": "default",
-      "chunks": [
-        "app/projects/sweetienails/page:static/chunks/app/projects/sweetienails/page.js"
-      ],
-      "async": false
-    },
-    "/Users/tonynguyen/nails_and_spa_project/client/app/projects/sweetienails/layout.tsx": {
-      "id": "(app-client)/./app/projects/sweetienails/layout.tsx",
-      "name": "*",
-      "chunks": [
-        "app/projects/sweetienails/layout:static/chunks/app/projects/sweetienails/layout.js"
-      ],
-      "async": false
-    },
-    "/Users/tonynguyen/nails_and_spa_project/client/app/projects/sweetienails/layout.tsx#": {
-      "id": "(app-client)/./app/projects/sweetienails/layout.tsx",
-      "name": "",
-      "chunks": [
-        "app/projects/sweetienails/layout:static/chunks/app/projects/sweetienails/layout.js"
-      ],
-      "async": false
-    },
-    "/Users/tonynguyen/nails_and_spa_project/client/app/projects/sweetienails/layout.tsx#default": {
-      "id": "(app-client)/./app/projects/sweetienails/layout.tsx",
-      "name": "default",
-      "chunks": [
-        "app/projects/sweetienails/layout:static/chunks/app/projects/sweetienails/layout.js"
       ],
       "async": false
     }
