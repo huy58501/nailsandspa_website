@@ -6,7 +6,8 @@ import { InputText } from "primereact/inputtext";
 import { InputMask } from "primereact/inputmask";
 import { Button } from "primereact/button";
 import { Dialog } from "primereact/dialog";
-import "@/src/styles/projects/NailsAndSpa/font-end/booking.css";
+import "@/src/styles/booking.css";
+import Head from 'next/head';
 
 const employees = [
   { label: "Employee 1", value: "employee1" },
@@ -134,7 +135,7 @@ const BookingPage = () => {
     if (hasError) return; // Prevent form submission if any field is invalid
   
     try {
-      const response = await fetch("https://16ulufaar6.execute-api.us-east-2.amazonaws.com/prod/api/sendSmsConfirmation", {
+      const response = await fetch("https://smsserver-ekeeb0dvh8fkdsfk.canadacentral-01.azurewebsites.net/api/sendSmsConfirmation", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -177,115 +178,113 @@ const BookingPage = () => {
   };
 
   return (
+  <>
+    <Head>
+      <title>LaCloche Home</title>
+      <meta name="description" content="Explore our past projects showcasing premium home décor and design expertise." />
+      <meta name="keywords" content="home projects, interior design, LaCloche Home projects" />
+    </Head>
     <div className="booking-container">
-      {/* Calendar */}
-      <div className="calendar">
-        <h3>Select a Date</h3>
-        <Calendar
-          value={date}
-          onChange={(e) => setDate(e.value instanceof Date ? e.value : null)}
-          inline
-          showWeek
-        />
-      </div>
-
-      {/* Input Form */}
-      <form onSubmit={handleSubmit} className="form-container">
-        <h3>Booking Details</h3>
-
-        <div>
-          <label>Customer Name</label>
-          <InputText
-            name="customerName"
-            value={formData.customerName}
-            onChange={handleInputChange}
-            placeholder="Enter customer name"
-            style={{ width: "100%" }}
-          />
-          {errors.customerName && <small className="error">{errors.customerName}</small>}
+        {/* Calendar */}
+        <div className="calendar">
+          <h3>Select a Date</h3>
+          <Calendar
+            value={date}
+            onChange={(e) => setDate(e.value instanceof Date ? e.value : null)}
+            inline
+            showWeek />
         </div>
 
-        <div>
-          <label>Phone</label>
-          <InputMask
-            mask="(999) 999-9999"
-            name="phone"
-            value={formData.phone}
-            onChange={(e: any) => handleInputChange(e)}
-            placeholder="Enter phone number"
-            style={{ width: "100%" }}
-          />
-          {errors.phone && <small className="error">{errors.phone}</small>}
-        </div>
+        {/* Input Form */}
+        <form onSubmit={handleSubmit} className="form-container">
+          <h3>Booking Details</h3>
 
-        <div>
-          <label>Email</label>
-          <InputText
-            name="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            placeholder="Enter email"
-            style={{ width: "100%" }}
-          />
-          {errors.email && <small className="error">{errors.email}</small>}
-        </div>
-
-        <div>
-          <label>Employee</label>
-          <Dropdown
-            value={formData.employee}
-            options={employees}
-            onChange={(e) => handleDropdownChange(e, "employee")}
-            placeholder="Select an employee"
-            style={{ width: "100%" }}
-          />
-          {errors.employee && <small className="error">{errors.employee}</small>}
-        </div>
-
-        <div>
-          <label>Service</label>
-          <Dropdown
-            value={formData.service}
-            options={services}
-            onChange={(e) => handleDropdownChange(e, "service")}
-            placeholder="Select a service"
-            style={{ width: "100%" }}
-          />
-          {errors.service && <small className="error">{errors.service}</small>}
-        </div>
-
-        <div>
-          <label>Time</label>
-          <Dropdown
-            value={formData.time}
-            options={timeOptions}
-            onChange={(e) => handleDropdownChange(e, "time")}
-            placeholder="Select a time"
-            style={{ width: "100%" }}
-          />
-          {errors.time && <small className="error">{errors.time}</small>}
-        </div>
-
-
-        <Button label="Submit" type="submit" />
-      </form>
-
-      {/* Dialog for Booking Confirmation */}
-      <Dialog
-        visible={showDialog}
-        onHide={handleCloseDialog}
-        header="Booking Successful"
-        footer={
           <div>
+            <label>Customer Name</label>
+            <InputText
+              name="customerName"
+              value={formData.customerName}
+              onChange={handleInputChange}
+              placeholder="Enter customer name"
+              style={{ width: "100%" }} />
+            {errors.customerName && <small className="error">{errors.customerName}</small>}
+          </div>
+
+          <div>
+            <label>Phone</label>
+            <InputMask
+              mask="(999) 999-9999"
+              name="phone"
+              value={formData.phone}
+              onChange={(e: any) => handleInputChange(e)}
+              placeholder="Enter phone number"
+              style={{ width: "100%" }} />
+            {errors.phone && <small className="error">{errors.phone}</small>}
+          </div>
+
+          <div>
+            <label>Email</label>
+            <InputText
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              placeholder="Enter email"
+              style={{ width: "100%" }} />
+            {errors.email && <small className="error">{errors.email}</small>}
+          </div>
+
+          <div>
+            <label>Employee</label>
+            <Dropdown
+              value={formData.employee}
+              options={employees}
+              onChange={(e) => handleDropdownChange(e, "employee")}
+              placeholder="Select an employee"
+              style={{ width: "100%" }} />
+            {errors.employee && <small className="error">{errors.employee}</small>}
+          </div>
+
+          <div>
+            <label>Service</label>
+            <Dropdown
+              value={formData.service}
+              options={services}
+              onChange={(e) => handleDropdownChange(e, "service")}
+              placeholder="Select a service"
+              style={{ width: "100%" }} />
+            {errors.service && <small className="error">{errors.service}</small>}
+          </div>
+
+          <div>
+            <label>Time</label>
+            <Dropdown
+              value={formData.time}
+              options={timeOptions}
+              onChange={(e) => handleDropdownChange(e, "time")}
+              placeholder="Select a time"
+              style={{ width: "100%" }} />
+            {errors.time && <small className="error">{errors.time}</small>}
+          </div>
+
+
+          <Button label="Submit" type="submit" />
+        </form>
+
+        {/* Dialog for Booking Confirmation */}
+        <Dialog
+          visible={showDialog}
+          onHide={handleCloseDialog}
+          header="Booking Successful"
+          footer={<div>
             <Button label="Keep Booking" onClick={handleBookAnother} />
             <a href='/projects/sweetienails'><Button label="Return Home" onClick={handleReturnHome} /></a>
-          </div>
-        }
-      >
-        <p>Your appointment has been booked successfully!</p>
-        <p>Would you like to book another appointment or return to the home page?</p>
-      </Dialog>
-    </div>
+          </div>}
+        >
+          <p>Your appointment has been booked successfully!</p>
+          <p>Would you like to book another appointment or return to the home page?</p>
+        </Dialog>
+      </div>
+  </>
   );
 };
 

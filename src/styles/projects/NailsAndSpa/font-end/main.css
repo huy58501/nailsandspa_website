@@ -511,7 +511,6 @@ footer {
     gap: 10px;
     transition: transform 1s ease-in-out; /* Smooth transition */
 }
-
 .image-item {
     display: flex;
     justify-content: center;
