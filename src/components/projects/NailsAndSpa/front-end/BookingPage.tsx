@@ -6,7 +6,7 @@ import { InputText } from "primereact/inputtext";
 import { InputMask } from "primereact/inputmask";
 import { Button } from "primereact/button";
 import { Dialog } from "primereact/dialog";
-import "@/src/styles/booking.css";
+import "@/src/styles/projects/NailsAndSpa/font-end/booking.css";
 import Head from 'next/head';
 
 const employees = [
@@ -135,7 +135,7 @@ const BookingPage = () => {
     if (hasError) return; // Prevent form submission if any field is invalid
   
     try {
-      const response = await fetch("https://smsserver-ekeeb0dvh8fkdsfk.canadacentral-01.azurewebsites.net/api/sendSmsConfirmation", {
+      const response = await fetch("https://admin.tonyinthewild.ca/api/twillo-handler.php/sendSmsConfirmation", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
